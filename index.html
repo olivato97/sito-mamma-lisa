@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="it">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#f9ece0" />
+    <title>L'avventura di Anna</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="storybook" aria-live="polite">
+      <div class="sky-decoration" aria-hidden="true">
+        <span>✦</span><span>♥</span><span>✦</span><span>•</span><span>✦</span>
+      </div>
+      <div id="confetti" class="confetti" aria-hidden="true"></div>
+
+      <section class="scene scene--intro is-active" data-scene="0" aria-labelledby="intro-title">
+        <div class="intro-orbit orbit-one" aria-hidden="true">✦</div>
+        <div class="intro-orbit orbit-two" aria-hidden="true">♥</div>
+        <div class="intro-content">
+          <p class="eyebrow">30 luglio 2026</p>
+          <h1 id="intro-title">L'avventura<br /><em>di Anna</em></h1>
+          <p class="intro-copy">Una storia di risate, amore e persone speciali.</p>
+          <button class="button button--primary button--start" type="button" data-next>
+            Parti per l'avventura <span aria-hidden="true">✨</span>
+          </button>
+        </div>
+        <div class="intro-photo photo-frame photo-frame--round">
+          <img src="Immagini/7.jpg" alt="Anna sorridente" />
+        </div>
+        <p class="swipe-hint">Una piccola storia da scoprire</p>
+      </section>
+
+      <section class="scene scene--birth" data-scene="1" aria-labelledby="birth-title" hidden>
+        <div class="scene-inner split-layout">
+          <div class="photo-frame photo-frame--tall birth-photo">
+            <img src="Immagini/2.jpg" alt="Anna neonata tra le braccia della sorella" />
+          </div>
+          <div class="copy-card">
+            <p class="eyebrow">Capitolo uno</p>
+            <h2 id="birth-title">È arrivata<br /><em>Anna</em></h2>
+            <p>Trent'anni fa… no, scherziamo: <strong>21 anni fa</strong> nasceva Anna.</p>
+            <p>Una piccola creatura — beh, non proprio piccola, dato che pesava quanto un'anguria ben matura. <span class="inline-emoji">🍉</span></p>
+            <button class="button button--primary" type="button" data-next>Continua <span aria-hidden="true">→</span></button>
+          </div>
+        </div>
+      </section>
+
+      <section class="scene scene--mamma" data-scene="2" aria-labelledby="mamma-title" hidden>
+        <div class="scene-inner mamma-layout">
+          <div class="copy-card copy-card--light">
+            <p class="eyebrow">Ma aspetta…</p>
+            <h2 id="mamma-title">La vera<br /><em>protagonista</em></h2>
+            <p>Ma quello stesso giorno nasceva anche un'altra persona: <strong>la mamma.</strong></p>
+            <p>Senza di lei, nulla di tutto questo sarebbe mai successo.</p>
+            <button class="button button--primary" type="button" data-next>Continua <span aria-hidden="true">→</span></button>
+          </div>
+          <div class="photo-frame photo-frame--polaroid mamma-photo">
+            <img src="Immagini/1.jpg" alt="La mamma con le sue figlie davanti all'albero di Natale" />
+            <span class="polaroid-note">Tutto parte da qui ♥</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="scene scene--memories" data-scene="3" aria-labelledby="memories-title" hidden>
+        <div class="scene-inner memories-layout">
+          <div class="copy-card copy-card--wide">
+            <p class="eyebrow">Tutte le cose possibili</p>
+            <h2 id="memories-title">Perché con lei<br />si impara a <em>vivere</em></h2>
+            <p>È la persona senza la quale non avremmo sbagliato, non avremmo imparato, non avremmo viaggiato, non avremmo fatto lavoretti né scoperto le nostre passioni.</p>
+            <p class="punchline">Come quella di Anna: squartare le persone… e fare il piccolo chimico. <span aria-label="medico e provetta">🩺🧪</span></p>
+          </div>
+          <div class="memory-photos" aria-label="Ricordi di Anna e della sua famiglia">
+            <figure class="memory-photo memory-photo--one"><img src="Immagini/3.jpg" alt="Anna e sua sorella da bambine" /></figure>
+            <figure class="memory-photo memory-photo--two"><img src="Immagini/4.jpg" alt="Anna con i nonni in montagna" /></figure>
+            <figure class="memory-photo memory-photo--three"><img src="Immagini/5.jpg" alt="Anna sorridente da bambina" /></figure>
+          </div>
+          <button class="button button--primary button--memories" type="button" data-next>Verso il finale <span aria-hidden="true">→</span></button>
+        </div>
+      </section>
+
+      <section class="scene scene--final" data-scene="4" aria-labelledby="final-title" hidden>
+        <div class="scene-inner final-layout">
+          <div class="final-photos">
+            <div class="photo-frame final-photo final-photo--one"><img src="Immagini/6.jpg" alt="Anna e sua sorella che formano un cuore con le braccia in montagna" /></div>
+            <div class="photo-frame final-photo final-photo--two"><img src="Immagini/7.jpg" alt="Ritratto di Anna" /></div>
+          </div>
+          <div class="copy-card copy-card--final">
+            <p class="eyebrow">Il finale più bello</p>
+            <h2 id="final-title">Auguri <em>Anna.</em><br />E auguri mamma!</h2>
+            <p>Ti vogliamo tanto bene. E oggi è giusto festeggiare anche te.</p>
+            <p>Perché, alla fine, è lei che ha fatto tutta la fatica. <span class="inline-emoji">💛</span></p>
+            <button class="button button--primary" id="celebrate" type="button">Fate festa! <span aria-hidden="true">🎉</span></button>
+            <button class="button button--text" type="button" data-restart>Ricomincia l'avventura ↺</button>
+          </div>
+        </div>
+      </section>
+
+      <nav class="progress" aria-label="Avanzamento della storia">
+        <span class="progress-label">01 / 05</span>
+        <div class="progress-track" aria-hidden="true"><span class="progress-value"></span></div>
+      </nav>
+    </main>
+    <script src="app.js"></script>
+  </body>
+</html>
