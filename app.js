@@ -42,3 +42,19 @@ function celebrate() {
 }
 document.querySelector('#celebrate').addEventListener('click', celebrate);
 showScene(0);
+//StellineLisa
+const container = document.getElementById("sparkles");
+const NUMBER_OF_STARS = 18;
+for(let i = 0; i < NUMBER_OF_STARS; i++){
+  
+    const star = document.createElement("div");
+    star.className = "sparkle";
+    star.style.left = Math.random() * 100 + "%";
+    star.style.top = Math.random() * 100 + "%";
+    const size = 8 + Math.random() * 18;
+    star.style.width = size + "px";
+    star.style.height = size + "px";
+    star.style.animationDuration = (1.8 + Math.random() * 2.5) + "s";
+    star.style.animationDelay = (Math.random() * 4) + "s";
+    container.appendChild(star);
+}
