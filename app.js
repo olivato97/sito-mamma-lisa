@@ -57,13 +57,13 @@ function createSparkle() {
   const size = Math.random() * 15 + 10;
   star.style.fontSize = size + "px";
 
-  star.style.animationDuration = (1 + Math.random() * 2) + "s";
+  star.style.animationDuration = (3 + Math.random() * 5) + "s";
 
   sparkles.appendChild(star);
 
   setTimeout(() => {
     star.remove();
-  }, 3000);
+  }, 7000);
 }
 
 // crea una stellina ogni mezzo secondo
