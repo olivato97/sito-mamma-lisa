@@ -57,7 +57,7 @@ function createSparkle() {
   const size = Math.random() * 15 + 10;
   star.style.fontSize = size + "px";
 
-  star.style.animationDuration = (3 + Math.random() * 5) + "s";
+  star.style.animationDuration = (3 + Math.random() * 3) + "s";
 
   sparkles.appendChild(star);
 
