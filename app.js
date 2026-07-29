@@ -68,3 +68,16 @@ function createSparkle() {
 
 // crea una stellina ogni mezzo secondo
 setInterval(createSparkle, 500);
+const giftButton = document.getElementById('gift-button');
+const giftSong = document.getElementById('gift-song');
+let giftPlaying = false;
+giftButton.addEventListener('click', () => {
+  if (giftPlaying) {
+    giftSong.pause();
+    giftButton.innerHTML = 'Regalo per te <span aria-hidden="true">🎁</span>';
+  } else {
+    giftSong.play();
+    giftButton.innerHTML = 'Metti in pausa <span aria-hidden="true">⏸️</span>';
+  }
+  giftPlaying = !giftPlaying;
+});
