@@ -2,6 +2,10 @@ const scenes = [...document.querySelectorAll('.scene')];
 const progressValue = document.querySelector('.progress-value');
 const progressLabel = document.querySelector('.progress-label');
 const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+const gnomeModelViewer = document.querySelector('.gnome-model');
+if (gnomeModelViewer && window.GNOME_MODEL_DATA_URL) {
+  gnomeModelViewer.src = window.GNOME_MODEL_DATA_URL;
+}
 let currentScene = 0;
 
 function showScene(index) {
@@ -16,6 +20,13 @@ function showScene(index) {
   progressLabel.textContent = `${String(currentScene + 1).padStart(2, '0')} / ${String(scenes.length).padStart(2, '0')}`;
   window.scrollTo({ top: 0, behavior: reducedMotion ? 'auto' : 'smooth' });
   scenes[currentScene].querySelector('h1, h2')?.focus?.();
+
+  const modelViewer = scenes[currentScene].querySelector('model-viewer');
+  if (modelViewer) {
+    const refreshModel = () => modelViewer.updateFraming?.();
+    window.requestAnimationFrame(() => window.requestAnimationFrame(refreshModel));
+    if (!modelViewer.loaded) modelViewer.addEventListener('load', refreshModel, { once: true });
+  }
 }
 
 document.querySelectorAll('[data-next]').forEach((button) => button.addEventListener('click', () => showScene(currentScene + 1)));

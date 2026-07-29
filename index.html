@@ -63,15 +63,25 @@
             <img src="Immagini/1.jpg" alt="La mamma con le sue figlie davanti all'albero di Natale" />
             <span class="polaroid-note">Tutto parte da qui ♥</span>
           </div>
+          <div class="gnome-stage" aria-label="Un piccolo aiutante per la sorpresa">
+            <span class="gnome-spark gnome-spark--one" aria-hidden="true">&#10022;</span>
+            <span class="gnome-spark gnome-spark--two" aria-hidden="true">&#10022;</span>
+            <model-viewer
+              class="gnome-model"
+              alt="Gnomo animato di benvenuto"
+              auto-rotate
+              rotation-per-second="8deg"
+              loading="eager"
+              camera-controls
+              disable-pan
+              disable-zoom
+              interaction-prompt="none"
+              shadow-intensity="1.2"
+              shadow-softness=".8">
+            </model-viewer>
+            <p class="gnome-note">Una sorpresa per te</p>
+          </div>
         </div>
-                <model-viewer 
-            src="Immagini/gnome_welcome.glb"
-            auto-rotate
-            rotation-per-second="8deg"
-            camera-controls
-            disable-zoom
-            style="width:500px;height:500px;">
-        </model-viewer>
       </section>
 
       <section class="scene scene--memories" data-scene="3" aria-labelledby="memories-title" hidden>
@@ -116,6 +126,7 @@
         <div class="progress-track" aria-hidden="true"><span class="progress-value"></span></div>
       </nav>
     </main>
+    <script src="Immagini/gnome-model-data.js"></script>
     <script src="app.js"></script>
   </body>
 </html>
