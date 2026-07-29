@@ -9,6 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="styles.css" />
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
   </head>
   <body>
     <main class="storybook" aria-live="polite">
@@ -63,6 +64,14 @@
             <span class="polaroid-note">Tutto parte da qui ♥</span>
           </div>
         </div>
+                <model-viewer 
+            src="Immagini/cuore.glb"
+            auto-rotate
+            rotation-per-second="8deg"
+            camera-controls
+            disable-zoom
+            style="width:500px;height:500px;">
+        </model-viewer>
       </section>
 
       <section class="scene scene--memories" data-scene="3" aria-labelledby="memories-title" hidden>
