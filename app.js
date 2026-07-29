@@ -60,7 +60,7 @@ function createSparkle() {
   star.style.animationDuration = (3 + Math.random() * 3) + "s";
 
   sparkles.appendChild(star);
-
+  star.innerHTML = Math.random() > 0.5 ? "✦" : "✨";
   setTimeout(() => {
     star.remove();
   }, 7000);
@@ -68,5 +68,3 @@ function createSparkle() {
 
 // crea una stellina ogni mezzo secondo
 setInterval(createSparkle, 500);
-star.innerHTML = "✦";
-star.innerHTML = Math.random() > 0.5 ? "✦" : "✨";
